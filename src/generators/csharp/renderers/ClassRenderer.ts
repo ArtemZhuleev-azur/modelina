@@ -101,67 +101,74 @@ export const CSHARP_DEFAULT_CLASS_PRESET: CsharpClassPreset<CSharpOptions> = {
     return renderer.defaultSelf();
   },
   async property({ renderer, property, options }) {
-    let nullablePropertyEnding = '';
     if (
-      options?.handleNullable &&
-      property.required &&
-      !isPrimitive(property) &&
-      !isEnum(property) &&
-      !isStringRenderingType(property)
+      property.propertyName === 'additionalProperties' &&
+      property.property instanceof ConstrainedDictionaryModel
     ) {
-      nullablePropertyEnding = ' = null!';
-    }
-
-    if (options?.autoImplementedProperties) {
-      const getter = await renderer.runGetterPreset(property);
-      const setter = await renderer.runSetterPreset(property);
-
-      if (property.property.options.const) {
-        return `public const ${property.property.type} ${pascalCase(
-          property.propertyName
-        )} { ${getter} } = ${property.property.options.const.value};`;
-      }
-
-      const semiColon = nullablePropertyEnding !== '' ? ';' : '';
-      return `public ${property.property.type} ${pascalCase(
-        property.propertyName
-      )} { ${getter} ${setter} }${nullablePropertyEnding}${semiColon}`;
-    }
-
-    if (property.property.options.const) {
-      return `private const ${property.property.type} ${property.propertyName} = ${property.property.options.const.value};`;
-    }
-    return `private ${property.property.type} ${property.propertyName}${nullablePropertyEnding};`;
-  },
-  async accessor({ renderer, options, property }) {
-    const formattedAccessorName = pascalCase(property.propertyName);
-    if (options?.autoImplementedProperties) {
       return '';
     }
 
-    if (property.property.options.const) {
-      return `public ${property.property.type} ${formattedAccessorName} 
-{
-  ${await renderer.runGetterPreset(property)}
-}`;
-    }
+    let nullablePropertyEnding = '';
+    // if (
+    //   options?.handleNullable &&
+    //   property.required &&
+    //   !isPrimitive(property) &&
+    //   !isEnum(property) &&
+    //   !isStringRenderingType(property)
+    // ) {
+    //   nullablePropertyEnding = ' = null!';
+    // }
 
-    return `public ${property.property.type} ${formattedAccessorName} 
-{
-  ${await renderer.runGetterPreset(property)}
-  ${await renderer.runSetterPreset(property)}
-}`;
+    // if (options?.autoImplementedProperties) {
+    //   const getter = await renderer.runGetterPreset(property);
+    //   const setter = await renderer.runSetterPreset(property);
+
+    //   if (property.property.options.const) {
+    //     return `public const ${property.property.type} ${pascalCase(
+    //       property.propertyName
+    //     )} { ${getter} } = ${property.property.options.const.value};`;
+    //   }
+
+    //   const semiColon = nullablePropertyEnding !== '' ? ';' : '';
+    //   return `public ${property.property.type} ${pascalCase(
+    //     property.propertyName
+    //   )} { ${getter} ${setter} }${nullablePropertyEnding}${semiColon}`;
+    // }
+
+    // if (property.property.options.const) {
+    //   return `private const ${property.property.type} ${property.propertyName} = ${property.property.options.const.value};`;
+    // }
+    return `private ${property.property.type} ${property.propertyName}${nullablePropertyEnding};`;
   },
-  getter({ options, property }) {
-    if (options?.autoImplementedProperties) {
-      return 'get;';
-    }
-    return `get { return ${property.propertyName}; }`;
-  },
-  setter({ options, property }) {
-    if (options?.autoImplementedProperties) {
-      return 'set;';
-    }
-    return `set { this.${property.propertyName} = value; }`;
-  }
+//   async accessor({ renderer, options, property }) {
+//     const formattedAccessorName = pascalCase(property.propertyName);
+//     if (options?.autoImplementedProperties) {
+//       return '';
+//     }
+
+//     if (property.property.options.const) {
+//       return `public ${property.property.type} ${formattedAccessorName} 
+// {
+//   ${await renderer.runGetterPreset(property)}
+// }`;
+//     }
+
+//     return `public ${property.property.type} ${formattedAccessorName} 
+// {
+//   ${await renderer.runGetterPreset(property)}
+//   ${await renderer.runSetterPreset(property)}
+// }`;
+  // }
+  // getter({ options, property }) {
+  //   if (options?.autoImplementedProperties) {
+  //     return 'get;';
+  //   }
+  //   return `get { return ${property.propertyName}; }`;
+  // },
+  // setter({ options, property }) {
+  //   if (options?.autoImplementedProperties) {
+  //     return 'set;';
+  //   }
+  //   return `set { this.${property.propertyName} = value; }`;
+  // }
 };
