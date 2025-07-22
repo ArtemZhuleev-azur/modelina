@@ -138,7 +138,7 @@ export const CSHARP_DEFAULT_CLASS_PRESET: CsharpClassPreset<CSharpOptions> = {
     // if (property.property.options.const) {
     //   return `private const ${property.property.type} ${property.propertyName} = ${property.property.options.const.value};`;
     // }
-    return `private ${property.property.type} ${property.propertyName}${nullablePropertyEnding};`;
+    return `public ${property.property.type} ${property.propertyName}${nullablePropertyEnding};`;
   },
 //   async accessor({ renderer, options, property }) {
 //     const formattedAccessorName = pascalCase(property.propertyName);

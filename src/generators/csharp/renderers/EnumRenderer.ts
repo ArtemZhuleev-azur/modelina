@@ -100,6 +100,6 @@ export const CSHARP_DEFAULT_ENUM_PRESET: EnumPresetType<CSharpOptions> = {
     return renderer.defaultSelf();
   },
   item({ item }) {
-    return item.key;
+    return `[EnumMember(Value = ${item.value})]\n${item.key}`;
   }
 };
