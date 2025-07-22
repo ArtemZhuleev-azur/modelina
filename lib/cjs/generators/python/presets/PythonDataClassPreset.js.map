@@ -1,0 +1,1 @@
+{"version":3,"file":"PythonDataClassPreset.js","sourceRoot":"","sources":["../../../../../src/generators/python/presets/PythonDataClassPreset.ts"],"names":[],"mappings":";;;AAEa,QAAA,uBAAuB,GAAiB;IACnD,KAAK,EAAE;QACL,IAAI,CAAC,EAAE,QAAQ,EAAE;YACf,OAAO,oDAAoD,QAAQ,CAAC,WAAW,EAAE,EAAE,CAAC;QACtF,CAAC;KACF;CACF,CAAC"}

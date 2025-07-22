@@ -1,7 +1,7 @@
 node_modules
 .vscode
 coverage
-lib
+# lib
 *.DS_Store
 .idea
 output

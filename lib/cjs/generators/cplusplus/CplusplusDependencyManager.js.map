@@ -1,0 +1,1 @@
+{"version":3,"file":"CplusplusDependencyManager.js","sourceRoot":"","sources":["../../../../src/generators/cplusplus/CplusplusDependencyManager.ts"],"names":[],"mappings":";;;AAAA,4EAAyE;AAGzE,MAAa,0BAA2B,SAAQ,qDAAyB;IACvE,YACS,OAAyB,EAChC,eAAyB,EAAE;QAE3B,KAAK,CAAC,YAAY,CAAC,CAAC;QAHb,YAAO,GAAP,OAAO,CAAkB;IAIlC,CAAC;CACF;AAPD,gEAOC"}

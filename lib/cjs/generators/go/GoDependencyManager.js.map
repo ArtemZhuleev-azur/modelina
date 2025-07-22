@@ -1,0 +1,1 @@
+{"version":3,"file":"GoDependencyManager.js","sourceRoot":"","sources":["../../../../src/generators/go/GoDependencyManager.ts"],"names":[],"mappings":";;;AAAA,4EAAyE;AAGzE,MAAa,mBAAoB,SAAQ,qDAAyB;IAChE,YACS,OAAkB,EACzB,eAAyB,EAAE;QAE3B,KAAK,CAAC,YAAY,CAAC,CAAC;QAHb,YAAO,GAAP,OAAO,CAAW;IAI3B,CAAC;CACF;AAPD,kDAOC"}

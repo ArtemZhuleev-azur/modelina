@@ -1,0 +1,1 @@
+{"version":3,"file":"RustDependencyManager.js","sourceRoot":"","sources":["../../../../src/generators/rust/RustDependencyManager.ts"],"names":[],"mappings":";;;AAAA,4EAAyE;AAGzE,MAAa,qBAAsB,SAAQ,qDAAyB;IAClE,YACS,OAAoB,EAC3B,eAAyB,EAAE;QAE3B,KAAK,CAAC,YAAY,CAAC,CAAC;QAHb,YAAO,GAAP,OAAO,CAAa;IAI7B,CAAC;CACF;AAPD,sDAOC"}

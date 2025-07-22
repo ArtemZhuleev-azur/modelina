@@ -1,0 +1,1 @@
+{"version":3,"file":"PythonPreset.js","sourceRoot":"","sources":["../../../../src/generators/python/PythonPreset.ts"],"names":[],"mappings":";;;AAGA,6DAGmC;AACnC,2DAGkC;AAElC,2EAA0E;AAC1E,mEAAkE;AAUrD,QAAA,qBAAqB,GAAgC;IAChE,KAAK,EAAE,2CAA2B;IAClC,IAAI,EAAE,yCAA0B;CACjC,CAAC;AAEW,QAAA,cAAc,GAAG;IAC5B,OAAO,EAAE,6BAAqB;IAC9B,SAAS,EAAE,+CAAuB;IAClC,KAAK,EAAE,uCAAmB;CAC3B,CAAC"}

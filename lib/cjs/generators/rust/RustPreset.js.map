@@ -1,0 +1,1 @@
+{"version":3,"file":"RustPreset.js","sourceRoot":"","sources":["../../../../src/generators/rust/RustPreset.ts"],"names":[],"mappings":";;;AAiBA,+DAGoC;AACpC,2DAGkC;AAClC,6DAGmC;AACnC,6DAGmC;AACnC,iEAGqC;AA2FxB,QAAA,mBAAmB,GAA4B;IAC1D,MAAM,EAAE,2CAA0B;IAClC,IAAI,EAAE,uCAAwB;IAC9B,KAAK,EAAE,yCAAyB;IAChC,KAAK,EAAE,yCAAyB;IAChC,OAAO,EAAE,6CAA2B;CACrC,CAAC"}
