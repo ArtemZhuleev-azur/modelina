@@ -13,6 +13,7 @@ import { CSharpOptions } from '../CSharpGenerator';
  */
 export class EnumRenderer extends CSharpRenderer<ConstrainedEnumModel> {
   async defaultSelf(): Promise<string> {
+    this.dependencyManager.addDependency('using System.Runtime.Serialization;');
     const enumItems = await this.renderItems();
     const getValueCaseItemValues = this.getValueCaseItemValues();
     const toEnumCaseItemValues = this.toEnumCaseItemValues();
@@ -41,13 +42,7 @@ ${this.indent(valueSwitch)}
     return `public enum ${this.model.name}
 {
 ${this.indent(enumItems)}
-}
-
-public static class ${this.model.name}Extensions
-{
-${this.indent(classContent)}
-}
-`;
+}`;
   }
 
   async renderItems(): Promise<string> {
